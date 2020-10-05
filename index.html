@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Conversor de IMEI</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script type="module" src="js/main.js" async></script>
+</head>
+<body>
+    <div class="content center">
+        <div class="logo-sodexo"></div>
+        <div class="logo-ativvus"></div>
+
+        <form class="form" action='#'>
+            <input type="text" maxlength="15" name="imei" class="imei input" autocomplete="off"
+            placeholder="Informe o IMEI primário:"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            <button type="button" class="btn input">Converter</button>
+            <p class="error">*O IMEI deve conter 15 digítos.</p>
+        </form>
+    </div>
+    <div class="result center">
+        <button class="btnRes input">X</button>
+        <p class="label">IMEI Secundário:</p>
+        <p class="res">123456789101112</p>
+    </div>
+</body>
+</html>
