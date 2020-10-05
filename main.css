@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: url(../img/paris.jpg);
+    background-size: cover;
+}
+
+.logo-sodexo{
+    width: 120px;
+    height: 70px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: contain;
+    margin: 50px;
+    float: left;
+}
+
+.logo-ativvus{
+    width: 120px;
+    height: 60px;
+    background: url(../img/ativvus_logo.png) no-repeat;
+    background-size: contain;
+    margin: 50px 0;
+    float: right;
+}
+
+.center{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.content{
+    width: 500px;
+    height: 420px;
+    background-color: rgba(7, 7, 17, 0.9);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.result{
+    width: 500px;
+    height: 105px;
+    margin-top: 400px;
+    padding-bottom: 20px;
+    background-color: rgba(7, 7, 17, .8);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.label{
+    font-size: 14pt;
+    padding: 2px;
+    margin-top: 20px;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.res{
+    margin-top: 20px;
+    font-size: 24pt;
+    padding-bottom: 20px;
+}
+
+.btnRes{
+    float: right;
+    width: 40px;
+    height: 25px;
+    background-color: #ee2525;
+    font-size: 14pt;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.btnRes:hover{
+    background-color:#ec4646;
+}
+
+.form{
+    width: 450px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input{
+    outline: none;
+    border: none;
+}
+
+.imei{
+    width: 400px;
+    height: 25px;
+    margin: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid #2ecc71;
+    font-size: 16pt;
+    transition: height .2s linear;
+}
+
+.imei:focus{
+    height: 50px;
+}
+
+.btn{
+    width: 130px;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #16a085;
+    font-size: 15pt;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .1s linear;
+    float: left;
+    margin-left: 25px;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    background-color: #2ecc71;
+}
+
+.error{
+    display: none;
+    width: max-content;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 25px;
+    background-color: rgba(236, 70, 70, 0.1);
+    padding: 5px;
+    border-bottom: 1px solid #ec4646;
+}
