@@ -140,3 +140,10 @@ body{
     padding: 5px;
     border-bottom: 1px solid #ec4646;
 } 
+
+@media screen and(max-width: 500px){
+    .content{
+      width: 100%;
+    }
+}
+
