@@ -3,12 +3,31 @@
     margin: 0;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    --content: #00022e;
+    --primary: #FF073A;
+    --secundary: rgba(2, 6, 111, 0.35);
+    --primary-hover: #fb1846;
+}
+
+.back-color{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secundary);
 }
 
 body{
-    background: url(../img/paris.jpg);
+    background: url(../img/paris.jpg) fixed;
     background-size: cover;
 }
+  
+  @keyframes error {
+    0% {margin-left: 23%;}
+    25% {margin-left: 29%;}
+    50% {margin-left: 23%;}
+    75% {margin-left: 29%;}
+    100% {margin-left: 25%;}
+  }
 
 .logo-sodexo{
     width: 120px;
@@ -40,7 +59,7 @@ body{
 .content{
     width: 500px;
     height: 420px;
-    background-color: rgba(7, 7, 17, 0.9);
+    background-color: var(--content);
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
@@ -51,9 +70,10 @@ body{
     height: 105px;
     margin-top: 400px;
     padding-bottom: 20px;
-    background-color: rgba(7, 7, 17, .8);
+    background-color: var(--content);
     border-radius: 5px;
     text-align: center;
+    filter: grayscale(0.1);
 }
 
 .label{
@@ -74,14 +94,14 @@ body{
     float: right;
     width: 40px;
     height: 25px;
-    background-color: #ee2525;
+    background-color: var(--primary);
     font-size: 14pt;
     cursor: pointer;
     transition: all .2s linear;
 }
 
 .btnRes:hover{
-    background-color:#ec4646;
+    background-color: var(--primary-hover);
 }
 
 .form{
@@ -103,7 +123,7 @@ body{
     height: 25px;
     margin: 10px;
     background-color: transparent;
-    border-bottom: 2px solid #2ecc71;
+    border-bottom: 2px solid var(--primary);
     font-size: 16pt;
     transition: height .2s linear;
 }
@@ -116,7 +136,7 @@ body{
     width: 130px;
     height: 35px;
     margin-top: 20px;
-    background-color: #16a085;
+    background-color: var(--primary);
     font-size: 15pt;
     border-radius: 2px;
     cursor: pointer;
@@ -127,7 +147,7 @@ body{
 
 .btn:hover{
     transform: scale(1.1);
-    background-color: #2ecc71;
+    background-color: var(--primary-hover);
 }
 
 .error{
@@ -139,12 +159,40 @@ body{
     background-color: rgba(236, 70, 70, 0.1);
     padding: 5px;
     border-bottom: 1px solid #ec4646;
-} 
-
-@media screen and(max-width: 500px){
-    .content{
-      width: 100%;
-      height: 100%;
-    }
 }
 
+@media screen and (max-width: 500px){
+    body{
+        background-position: top;
+        background-size: auto;
+    }
+
+    .content, .result{
+        width: 100%;
+    }
+
+    .content{
+        height: 100%;
+        border-radius: 0;
+        background-color: rgba(0, 2, 46, 0.76);
+    }
+
+    .form{
+        width: 90%;
+    }
+
+    .imei{
+        margin-top: 50px;
+        width: 95%;
+    }
+
+    .result{
+        height: 140px;
+    }
+
+    .btnRes{
+        width: 70px;
+        height: 40px;
+        font-size: 18pt;
+    }
+}
