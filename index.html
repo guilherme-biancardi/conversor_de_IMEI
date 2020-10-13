@@ -9,14 +9,14 @@
     <script type="module" src="js/main.js" async></script>
 </head>
 <body>
+    <div class="back-color"></div>
     <div class="content center">
         <div class="logo-sodexo"></div>
         <div class="logo-ativvus"></div>
 
         <form class="form" action='#'>
             <input type="text" maxlength="15" name="imei" class="imei input" autocomplete="off"
-            placeholder="Informe o IMEI primário:"
-            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            placeholder="Informe o IMEI primário:">
             <button type="button" class="btn input">Converter</button>
             <p class="error">*O IMEI deve conter 15 digítos.</p>
         </form>
